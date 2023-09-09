@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  host: db
+  username: root
+  password: <%= ENV.fetch("MYSQL_ROOT_PASSWORD") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 3306
+
+development:
+  <<: *default
+  database: tenantscoop_development
+
+test:
+  <<: *default
+  database: tenantscoop_test
