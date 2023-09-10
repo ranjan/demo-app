@@ -13,7 +13,7 @@
 
 #### Stop the app.
 ~~~
-#docker stop demo-app
+#docker stop demo-app-container
 ~~~
 
 #### Re start stopped container
@@ -28,5 +28,5 @@ docker logs demo-app-container
 
 #### Access container command line
 ~~~
-docker exec -it demo-app-container
+docker exec -it demo-app-container /bin/bash
 ~~~
